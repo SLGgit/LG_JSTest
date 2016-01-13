@@ -16,12 +16,28 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+	UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 50)];
+	button.backgroundColor = [UIColor redColor];
+	[button addTarget:self action:@selector(handleBtn:) forControlEvents:UIControlEventTouchUpInside];
+	[self.view addSubview:button];
+  
 }
+
+
+- (void)handleBtn:(id)sender
+{
+	NSLog(@"－－－－这是原生的button点击事件－－－－");
+}
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];
-	// Dispose of any resources that can be recreated.
+	
 }
 
 @end
